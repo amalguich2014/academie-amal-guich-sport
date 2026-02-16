@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>عقد شراكة استراتيجية متعددة الأطراف | أكاديمية أمل كيش</title>
+
+  <style>
+    :root{
+      --bg:#0b1220; --card:#101a2f; --muted:#94a3b8; --text:#f1f5f9;
+      --line: rgba(255,255,255,.10); --accent:#2563eb; --accent2:#3b82f6;
+      --paper:#0f172a; --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --danger:#ef4444;
+    }
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #1e293b, #0b1220);
+      color: var(--text);
+      padding: 22px;
+      line-height: 1.65;
+    }
+    .container{ max-width: 1120px; margin: 0 auto; }
+
+    .topbar{
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;
+      margin-bottom:16px; padding:14px 16px;
+      border:1px solid var(--line); border-radius:18px;
+      background: rgba(16,26,47,.72); backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+    .brand{ display:flex; gap:12px; align-items:center; min-width: 260px; }
+    .logo{
+      width:52px;height:52px;border-radius:16px;background:#fff;
+      display:flex;align-items:center;justify-content:center;color:#0b1220;font-weight:900;
+      flex: 0 0 auto;
+    }
+    .brand h1{ margin:0; font-size:18px; }
+    .brand p{ margin:2px 0 0; color:var(--muted); font-size:13px; }
+    .actions{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+
+    .btn{
+      border:0; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:800;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color:#fff; transition: transform .05s ease, opacity .15s ease;
+      box-shadow: 0 8px 18px rgba(37,99,235,.22);
+    }
+    .btn.secondary{
+      background: rgba(255,255,255,.06); border:1px solid var(--line);
+      box-shadow:none; font-weight:800;
+    }
+    .btn.danger{
+      background: rgba(239,68,68,.12);
+      border: 1px solid rgba(239,68,68,.35);
+      color: #fecaca;
+      box-shadow:none;
+    }
+    .btn:disabled{ opacity:.55; cursor:not-allowed; }
+    .btn:hover{ opacity:.95; }
+    .btn:active{ transform: scale(.98); }
+
+    .tabs{ display:flex; gap:10px; margin: 14px 0; flex-wrap:wrap; }
+    .tab{
+      padding:10px 14px; border-radius:12px; cursor:pointer;
+      border:1px solid var(--line); background: rgba(255,255,255,.04);
+      color: var(--text); font-weight:800; user-select:none;
+    }
+    .tab.active{ background: linear-gradient(90deg, var(--accent), var(--accent2)); border-color: transparent; }
+
+    .card{
+      background: rgba(16,26,47,.72);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .grid{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+    @media(max-width:900px){
+      .grid{ grid-template-columns: 1fr; }
+      body{ padding:14px; }
+      .brand h1{ font-size:16px; }
+    }
+
+    label{ display:block; font-size: 13px; color: var(--muted); margin-bottom:6px; font-weight:800; }
+    input, select, textarea{
+      width:100%; padding:10px 12px; border-radius:12px;
+      border:1px solid var(--line); background: rgba(0,0,0,.18);
+      color: var(--text); outline:none;
+    }
+    textarea{ min-height: 88px; resize: vertical; }
+
+    .hint{ color: var(--muted); font-size: 13px; margin-top:6px; }
+    .section-title{ display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .section-title h3{ margin:0; }
+
+    .party-card{
+      margin-top:12px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      background: rgba(255,255,255,.03);
+    }
+    .party-head{
+      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    .party-badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      background: rgba(37,99,235,.14);
+      border:1px solid rgba(37,99,235,.30);
+      color:#bfdbfe; font-weight:900; font-size: 12px;
+      white-space:nowrap;
+    }
+
+    .doc{
+      margin-top: 16px;
+      background: rgba(15,23,42,.86);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .doc-header{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom: 8px; }
+    h2{ margin:0 0 10px; font-size:18px; color:#e2e8f0; }
+    h3{ margin:18px 0 8px; font-size:15px; color:#e2e8f0; }
+    .muted{ color: var(--muted); font-size: 13px; }
+    .hr{ height:1px;background: var(--line); margin: 16px 0; }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center; padding:7px 10px; border-radius:999px;
+      background: rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.30);
+      color:#bfdbfe; font-weight:900; font-size: 12px; margin: 6px 6px 0 0; white-space:nowrap;
+    }
+    .sign-grid{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; margin-top: 10px; }
+    .sign-box{
+      border:1px dashed rgba(255,255,255,.22);
+      border-radius:14px; padding: 12px; min-height: 130px; background: rgba(255,255,255,.03);
+    }
+
+    .toast{
+      position: fixed; left: 16px; bottom: 16px; z-index: 1000; max-width: 360px;
+      background: rgba(15,23,42,.92); border: 1px solid var(--line);
+      padding: 12px 14px; border-radius: 14px; box-shadow: var(--shadow); display:none;
+    }
+    .toast.show{ display:block; }
+    .toast b{ display:block; margin-bottom:4px; }
+    .toast .small{ color: var(--muted); font-size: 12px; }
+
+    @page { margin: 16mm; }
+    @media print{
+      body{ background:#fff; color:#111827; padding:0; }
+      .topbar, .tabs, .card, .no-print, .toast{ display:none !important; }
+      .doc{ background:#fff; border:0; border-radius:0; color:#111827; padding: 0; box-shadow:none; }
+      .print-header{
+        display:flex !important; justify-content:space-between; align-items:flex-start; gap:12px;
+        margin-bottom: 10mm; border-bottom: 1px solid #e5e7eb; padding-bottom: 6mm;
+      }
+      .print-header .title{ font-size: 16pt; font-weight: 800; margin:0; }
+      .print-header .meta{ font-size: 10.5pt; color:#334155; }
+      .pill{ border:1px solid #cbd5e1; background:#f1f5f9; color:#0f172a; }
+      .sign-box{ background:#fff; border:1px dashed #94a3b8; }
+      a{ color:#111827; text-decoration:none; }
+      ul{ margin-top: 4mm; }
+    }
+    .print-header{ display:none; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="topbar no-print">
+      <div class="brand">
+        <div class="logo">AK</div>
+        <div>
+          <h1>عقد شراكة استراتيجية متعددة الأطراف</h1>
+          <p>أطراف متعددة • توريد • رعاية • استثمار • دعم مؤسساتي</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn secondary" id="btnToggle">AR/FR اتجاه</button>
+        <button class="btn secondary" id="btnLoad">تحميل من التخزين</button>
+        <button class="btn secondary" id="btnSave">حفظ</button>
+        <button class="btn" id="btnPrint">طباعة / PDF</button>
+      </div>
+    </div>
+
+    <div class="tabs no-print">
+      <button class="tab active" id="tabAR">العربية</button>
+      <button class="tab" id="tabFR">Français</button>
+    </div>
+
+    <!-- FORM -->
+    <div class="card no-print">
+      <h2>بيانات العقد (قابلة للتعبئة)</h2>
+      <p class="muted">أضف الشركاء (أطراف متعددة) وسيتم إدراجهم تلقائياً في نص العقد + ملحق منظم لكل طرف (حسب الدور) مع خيار “عرض كل الأقسام”.</p>
+
+      <div class="grid">
+        <div>
+          <label>تاريخ العقد</label>
+          <input id="contractDate" placeholder="مثال: 14/02/2026" />
+          <div class="hint">إذا تركته فارغاً سيتم إدراج تاريخ اليوم.</div>
+        </div>
+        <div>
+          <label>مكان التوقيع</label>
+          <input id="contractCity" placeholder="مثال: الرباط" />
+        </div>
+
+        <div>
+          <label>الطرف الأول (الأكاديمية) - الاسم</label>
+          <input id="party1Name" placeholder="أكاديمية أمل كيش" value="أكاديمية أمل كيش"/>
+        </div>
+        <div>
+          <label>الصفة القانونية للطرف الأول</label>
+          <select id="party1Legal">
+            <option value="جمعية رياضية">جمعية رياضية</option>
+            <option value="شركة / مؤسسة خاصة">شركة / مؤسسة خاصة</option>
+          </select>
+        </div>
+
+        <div>
+          <label>الممثل القانوني للطرف الأول</label>
+          <input id="party1Rep" placeholder="الاسم الكامل" />
+        </div>
+        <div>
+          <label>رقم الوصل/السجل (إن وجد)</label>
+          <input id="party1Reg" placeholder="رقم الوصل / السجل التجاري" />
+        </div>
+
+        <div>
+          <label>عنوان الأكاديمية</label>
+          <input id="party1Address" placeholder="العنوان الكامل" />
+        </div>
+        <div>
+          <label>الهاتف / البريد</label>
+          <input id="party1Contact" placeholder="الهاتف - البريد الإلكتروني" />
+        </div>
+
+        <div>
+          <label>مدة العقد</label>
+          <select id="duration">
+            <option value="سنة واحدة">سنة واحدة</option>
+            <option value="سنتان">سنتان</option>
+            <option value="ثلاث سنوات" selected>ثلاث سنوات</option>
+            <option value="أخرى">أخرى</option>
+          </select>
+        </div>
+        <div>
+          <label>إشعار عدم التجديد (بالأيام)</label>
+          <input id="noticeDays" type="number" value="60" min="0" />
+        </div>
+
+        <div>
+          <label>الشرط الجزائي (MAD)</label>
+          <input id="penaltyAmount" value="200000" inputmode="numeric"/>
+        </div>
+        <div>
+          <label>المدينة المختصة قضائياً</label>
+          <input id="courtCity" placeholder="مثال: مراكش" />
+        </div>
+
+        <div style="grid-column: 1 / -1;">
+          <label>تفاصيل عامة للعقد (اختياري)</label>
+          <textarea id="extraDetails" placeholder="تفاصيل عامة تنطبق على جميع الأطراف..."></textarea>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h3>الأطراف الإضافية (شركاء)</h3>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn secondary" id="btnAddParty">+ إضافة طرف</button>
+        </div>
+      </div>
+
+      <div id="partnersWrap"></div>
+
+      <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+        <button class="btn" id="btnRender">تحديث نص العقد</button>
+        <button class="btn secondary" id="btnReset">مسح الحقول</button>
+      </div>
+    </div>
+
+    <!-- DOCUMENT (AR) -->
+    <div class="doc" id="docAR">
+      <div class="print-header">
+        <div>
+          <p class="title">عقد شراكة استراتيجية متعددة الأطراف</p>
+          <div class="meta">أكاديمية أمل كيش</div>
+        </div>
+        <div class="meta">
+          تاريخ: <b id="pDate">—</b><br/>
+          مكان: <b id="pCity">—</b>
+        </div>
+      </div>
+
+      <div class="doc-header">
+        <div class="pill">نسخة عربية رسمية</div>
+        <div class="muted">جاهز للطباعة بصيغة PDF</div>
+      </div>
+
+      <h2>عقد شراكة استراتيجية متعددة الأطراف</h2>
+      <p class="muted">
+        تاريخ: <strong id="vDate">—</strong> • مكان التوقيع: <strong id="vCity">—</strong>
+      </p>
+
+      <div class="hr"></div>
+
+      <h3>الديباجة</h3>
+      <p>
+        بناءً على أحكام قانون الالتزامات والعقود المغربي، والقوانين المنظمة للأنشطة الرياضية والجمعوية عند الاقتضاء،
+        ورغبة الأطراف في تطوير وتثمين القطاع الرياضي والتكوين والتأطير، فقد تم الاتفاق على إبرام هذا العقد وفق البنود التالية.
+      </p>
+
+      <h3>الفصل 1: الأطراف</h3>
+      <div id="vPartiesAR"></div>
+
+      <h3>الفصل 2: موضوع العقد وطبيعة الشراكة</h3>
+      <p>
+        يهدف هذا العقد إلى إرساء شراكة استراتيجية لتطوير أنشطة الأكاديمية ومشاريعها، وذلك عبر واحد أو أكثر من المحاور التالية:
+        (1) توريد رسمي للملابس والمعدات، (2) رعاية رسمية، (3) استثمار مالي مقابل عائد/نسبة، (4) دعم مؤسساتي وتنموي
+        من مجلس العمالة أو الجماعة.
+      </p>
+
+      <h3>الفصل 3: التزامات الأطراف حسب الدور</h3>
+      <ul>
+        <li><b>مزود ملابس:</b> توريد الأطقم/المعدات وفق المواصفات وآجال التسليم، وعدم استعمال شعار الأكاديمية خارج إطار الترخيص.</li>
+        <li><b>راعٍ رسمي:</b> دعم مالي/عيني حسب الملحق، واحترام أخلاقيات الإشهار والامتثال القانوني.</li>
+        <li><b>مستثمر:</b> ضخ استثمار بعائد/نسبة وفق الاتفاق، وأي نقل ملكية أو إدارة لا يتم إلا بعقد مستقل موثق.</li>
+        <li><b>مجلس/جماعة:</b> دعم لوجستي/مالي أو تمكين من مرافق وفق القوانين ودفاتر التحملات عند الاقتضاء.</li>
+      </ul>
+
+      <h3>الفصل 4: المدة والتجديد</h3>
+      <p>
+        مدة هذا العقد: <strong id="vDuration">—</strong>،
+        ويجدد تلقائياً ما لم يوجه أحد الأطراف إشعاراً كتابياً بعدم التجديد قبل
+        <strong id="vNotice">—</strong> يوماً من تاريخ الانتهاء.
+      </p>
+
+      <h3>الفصل 5: السرية وحماية المعطيات</h3>
+      <p>
+        تلتزم الأطراف بالمحافظة على سرية جميع المعطيات المالية والإدارية ولوائح المنخرطين واللاعبين
+        وأي معلومات استراتيجية مرتبطة بالعقد، وعدم إفشائها لأي طرف ثالث دون موافقة كتابية، تحت طائلة التعويض.
+      </p>
+
+      <h3>الفصل 6: الشرط الجزائي والتعويضات</h3>
+      <p>
+        في حالة الإخلال الجسيم بأي التزام جوهري، يلتزم الطرف المخل بأداء شرط جزائي لا يقل عن
+        <strong id="vPenalty">—</strong> درهم، دون الإخلال بحق الطرف المتضرر في المطالبة بتعويض إضافي إذا تجاوز الضرر قيمة الشرط الجزائي.
+      </p>
+
+      <h3>الفصل 7: القانون الواجب التطبيق والاختصاص القضائي</h3>
+      <p>
+        يخضع هذا العقد للقانون المغربي، وفي حال النزاع يتم حله ودياً أولاً، وإلا فالمحكمة المختصة بمدينة:
+        <strong id="vCourtCity">—</strong>.
+      </p>
+
+      <h3>تفاصيل عامة (اختياري)</h3>
+      <p id="vExtraDetails" class="muted">—</p>
+
+      <div class="hr"></div>
+      <h3>الملاحق الخاصة بالأطراف</h3>
+      <div id="annexesAR"></div>
+
+      <div class="hr"></div>
+
+      <h3>التوقيعات والخواتم</h3>
+      <p class="muted">حرر بـ <strong id="vCity2">—</strong> بتاريخ <strong id="vDate2">—</strong>.</p>
+      <div id="signaturesAR" class="sign-grid"></div>
+    </div>
+
+    <!-- DOCUMENT (FR) -->
+    <div class="doc" id="docFR" style="display:none;" dir="ltr">
+      <div class="pill">Version Française Officielle</div>
+
+      <h2>Contrat de Partenariat Stratégique Multilatéral</h2>
+      <p class="muted">
+        Date : <strong id="vfDate">—</strong> • Ville : <strong id="vfCity">—</strong>
+      </p>
+
+      <div class="hr"></div>
+
+      <h3>Préambule</h3>
+      <p>
+        Conformément au droit marocain (Code des obligations et des contrats) et aux textes régissant les activités sportives
+        et associatives le cas échéant, les parties conviennent du présent partenariat stratégique.
+      </p>
+
+      <h3>Article 1 : Parties</h3>
+      <div id="vPartiesFR"></div>
+
+      <h3>Article 2 : Objet</h3>
+      <p>
+        Le présent contrat a pour objet un partenariat stratégique portant sur l’un ou plusieurs axes :
+        (1) Fourniture officielle d’équipements, (2) Sponsoring officiel, (3) Investissement contre rendement/part,
+        (4) Appui institutionnel (Conseil provincial / Commune).
+      </p>
+
+      <h3>Article 3 : Obligations selon le rôle</h3>
+      <ul>
+        <li><b>Fournisseur:</b> fourniture selon spécifications et délais, interdiction d’usage du logo hors cadre autorisé.</li>
+        <li><b>Sponsor:</b> appui financier/en nature selon annexe, conformité éthique et légale.</li>
+        <li><b>Investisseur:</b> investissement avec rendement/part, tout transfert de propriété/gestion nécessite un acte séparé.</li>
+        <li><b>Conseil/Commune:</b> appui logistique/financier ou mise à disposition d’infrastructures selon la réglementation.</li>
+      </ul>
+
+      <h3>Article 4 : Durée et renouvellement</h3>
+      <p>
+        Durée : <strong id="vfDuration">—</strong>. Renouvellement tacite sauf notification écrite
+        <strong id="vfNotice">—</strong> jours avant échéance.
+      </p>
+
+      <h3>Article 5 : Confidentialité</h3>
+      <p>
+        Les parties s’engagent à protéger les données financières, administratives, listes d’adhérents/joueurs et informations stratégiques,
+        sous peine de dommages et intérêts.
+      </p>
+
+      <h3>Article 6 : Clause pénale</h3>
+      <p>
+        En cas de violation grave, la partie défaillante devra payer une clause pénale minimale de
+        <strong id="vfPenalty">—</strong> MAD, sans préjudice d’une indemnisation complémentaire.
+      </p>
+
+      <h3>Article 7 : Droit applicable & juridiction</h3>
+      <p>
+        Contrat régi par le droit marocain. Compétence des tribunaux de : <strong id="vfCourtCity">—</strong>.
+      </p>
+
+      <h3>Détails généraux (optionnel)</h3>
+      <p id="vfExtraDetails" class="muted">—</p>
+
+      <div class="hr"></div>
+      <h3>Annexes par Partie</h3>
+      <div id="annexesFR"></div>
+
+      <div class="hr"></div>
+
+      <h3>Signatures</h3>
+      <p class="muted">Fait à <strong id="vfCity2">—</strong> le <strong id="vfDate2">—</strong>.</p>
+      <div id="signaturesFR" class="sign-grid"></div>
+    </div>
+
+  </div>
+
+  <div class="toast" id="toast">
+    <b id="toastTitle">—</b>
+    <div class="small" id="toastMsg">—</div>
+  </div>
+
+<script>
+  const STORAGE_KEY = "kwinx_contract_multilateral_final_v1";
+  const $ = (id) => document.getElementById(id);
+
+  function toast(title, msg){
+    const t = $("toast");
+    $("toastTitle").textContent = title || "إشعار";
+    $("toastMsg").textContent = msg || "";
+    t.classList.add("show");
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => t.classList.remove("show"), 2200);
+  }
+
+  function escapeHTML(str){
+    return String(str || "").replace(/[&<>"']/g, s => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+    }[s]));
+  }
+
+  function getVal(id){
+    const el = $(id);
+    return el ? (el.value || "").trim() : "";
+  }
+
+  function setText(id, text){
+    const el = $(id);
+    if(el) el.textContent = (text && String(text).trim()) ? text : "—";
+  }
+
+  function currentDateAR(){
+    return new Date().toLocaleDateString("ar-MA");
+  }
+
+  function partnerTemplate(overrides = {}){
+    return {
+      name: "",
+      role: "راعٍ رسمي",
+      rep: "",
+      reg: "",
+      address: "",
+      contact: "",
+
+      sponsorAnnual: "",
+      investmentAmount: "",
+      investorROI: "",
+      investorShare: "",
+
+      annex: {
+        showAllSections: false,
+
+        // general
+        scope: "",
+        startDate: "",
+        endDate: "",
+        exclusivity: "غير حصري",
+        notes: "",
+
+        // supply
+        supplyItems: "",
+        supplyQty: "",
+        supplyQuality: "",
+        supplyDelivery: "",
+        supplyWarranty: "",
+
+        // visibility
+        visibilityPlacements: "",
+        visibilityAssets: "",
+        contentPlan: "",
+        brandGuidelines: "",
+
+        // payments & kpis
+        paymentSchedule: [{ label: "دفعة 1", amount: "", due: "" }],
+        kpis: [{ label: "KPI 1", target: "", period: "" }]
+      },
+
+      ...overrides
+    };
+  }
+
+  let partners = [ partnerTemplate() ];
+
+  function roleOptionsHTML(selected){
+    const roles = [
+      "مزود ملابس رسمي",
+      "راعٍ رسمي",
+      "مستثمر",
+      "مجلس العمالة / الجماعة",
+      "شراكة متعددة الأدوار"
+    ];
+    return roles.map(r => `<option value="${escapeHTML(r)}" ${r===selected?"selected":""}>${escapeHTML(r)}</option>`).join("");
+  }
+
+  function roleSections(role){
+    // sections: general, supply, visibility, payments, kpis
+    switch(role){
+      case "مزود ملابس رسمي":
+        return { general:true, supply:true,  visibility:false, payments:true,  kpis:true };
+      case "راعٍ رسمي":
+        return { general:true, supply:false, visibility:true,  payments:true,  kpis:true };
+      case "مستثمر":
+        return { general:true, supply:false, visibility:false, payments:true,  kpis:true };
+      case "مجلس العمالة / الجماعة":
+        return { general:true, supply:false, visibility:false, payments:false, kpis:true };
+      case "شراكة متعددة الأدوار":
+        return { general:true, supply:true,  visibility:true,  payments:true,  kpis:true };
+      default:
+        return { general:true, supply:true,  visibility:true,  payments:true,  kpis:true };
+    }
+  }
+
+  function shouldShowSection(partner, sectionKey){
+    const a = partner.annex || {};
+    if (a.showAllSections) return true;
+    const flags = roleSections(partner.role);
+    return !!flags[sectionKey];
+  }
+
+  function applyPartnerSectionVisibility(){
+    const wrap = $("partnersWrap");
+    if(!wrap) return;
+    wrap.querySelectorAll("[data-section]").forEach(el => {
+      const i = Number(el.getAttribute("data-i"));
+      const section = el.getAttribute("data-section");
+      if (Number.isNaN(i) || !section) return;
+      el.style.display = shouldShowSection(partners[i], section) ? "" : "none";
+    });
+  }
+
+  function onPartnerFieldChange(e){
+    const i = Number(e.target.getAttribute("data-i"));
+    if (Number.isNaN(i)) return;
+
+    // partner base fields
+    const k = e.target.getAttribute("data-k");
+    if (k){
+      partners[i][k] = (e.target.value || "").trim();
+
+      // عند تغيير الدور: نطبق visibility مباشرة
+      if(k === "role"){
+        applyPartnerSectionVisibility();
+      }
+      render();
+      return;
+    }
+
+    // annex fields
+    const aKey = e.target.getAttribute("data-a");
+    if (aKey){
+      partners[i].annex = partners[i].annex || {};
+      if (e.target.type === "checkbox"){
+        partners[i].annex[aKey] = !!e.target.checked;
+        applyPartnerSectionVisibility();
+      } else {
+        partners[i].annex[aKey] = (e.target.value || "").trim();
+      }
+      render();
+      return;
+    }
+  }
+
+  function renderPayments(i){
+    const p = partners[i];
+    p.annex = p.annex || {};
+    p.annex.paymentSchedule = Array.isArray(p.annex.paymentSchedule) ? p.annex.paymentSchedule : [];
+
+    const host = document.getElementById(`payWrap_${i}`);
+    if(!host) return;
+
+    const rows = p.annex.paymentSchedule.map((r, idx) => `
+      <div class="grid" style="margin-bottom:10px;">
+        <div>
+          <label>عنوان الدفعة</label>
+          <input data-pay="label" data-i="${i}" data-idx="${idx}" value="${escapeHTML(r.label || "")}" placeholder="دفعة 1"/>
+        </div>
+        <div>
+          <label>المبلغ (MAD)</label>
+          <input data-pay="amount" data-i="${i}" data-idx="${idx}" value="${escapeHTML(r.amount || "")}" placeholder="مثال: 50000" inputmode="numeric"/>
+        </div>
+        <div>
+          <label>تاريخ الاستحقاق</label>
+          <input data-pay="due" data-i="${i}" data-idx="${idx}" value="${escapeHTML(r.due || "")}" placeholder="مثال: 10/04/2026"/>
+        </div>
+        <div style="display:flex; align-items:end;">
+          <button class="btn danger" type="button" data-delpay="${i}:${idx}">حذف</button>
+        </div>
+      </div>
+    `).join("");
+
+    host.innerHTML = rows || `<p class="muted">لا توجد دفعات بعد.</p>`;
+
+    host.querySelectorAll("input").forEach(el=>{
+      el.addEventListener("input", (e)=>{
+        const I = Number(e.target.getAttribute("data-i"));
+        const R = Number(e.target.getAttribute("data-idx"));
+        const key = e.target.getAttribute("data-pay");
+        partners[I].annex.paymentSchedule[R][key] = (e.target.value || "").trim();
+        render();
+      });
+    });
+
+    host.querySelectorAll("[data-delpay]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const [I, R] = btn.getAttribute("data-delpay").split(":").map(Number);
+        partners[I].annex.paymentSchedule.splice(R, 1);
+        renderPartnersForm();
+        render();
+      });
+    });
+  }
+
+  function renderKPIs(i){
+    const p = partners[i];
+    p.annex = p.annex || {};
+    p.annex.kpis = Array.isArray(p.annex.kpis) ? p.annex.kpis : [];
+
+    const host = document.getElementById(`kpiWrap_${i}`);
+    if(!host) return;
+
+    const rows = p.annex.kpis.map((r, idx) => `
+      <div class="grid" style="margin-bottom:10px;">
+        <div>
+          <label>المؤشر</label>
+          <input data-kpi="label" data-i="${i}" data-idx="${idx}" value="${escapeHTML(r.label || "")}" placeholder="مثال: عدد المنشورات"/>
+        </div>
+        <div>
+          <label>الهدف</label>
+          <input data-kpi="target" data-i="${i}" data-idx="${idx}" value="${escapeHTML(r.target || "")}" placeholder="مثال: 8 منشورات/شهر"/>
+        </div>
+        <div>
+          <label>الفترة</label>
+          <input data-kpi="period" data-i="${i}" data-idx="${idx}" value="${escapeHTML(r.period || "")}" placeholder="شهري/ربع سنوي..."/>
+        </div>
+        <div style="display:flex; align-items:end;">
+          <button class="btn danger" type="button" data-delkpi="${i}:${idx}">حذف</button>
+        </div>
+      </div>
+    `).join("");
+
+    host.innerHTML = rows || `<p class="muted">لا توجد مؤشرات بعد.</p>`;
+
+    host.querySelectorAll("input").forEach(el=>{
+      el.addEventListener("input", (e)=>{
+        const I = Number(e.target.getAttribute("data-i"));
+        const R = Number(e.target.getAttribute("data-idx"));
+        const key = e.target.getAttribute("data-kpi");
+        partners[I].annex.kpis[R][key] = (e.target.value || "").trim();
+        render();
+      });
+    });
+
+    host.querySelectorAll("[data-delkpi]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const [I, R] = btn.getAttribute("data-delkpi").split(":").map(Number);
+        partners[I].annex.kpis.splice(R, 1);
+        renderPartnersForm();
+        render();
+      });
+    });
+  }
+
+  function renderPartnersForm(){
+    const wrap = $("partnersWrap");
+    wrap.innerHTML = "";
+
+    partners.forEach((p, idx) => {
+      const n = idx + 2; // الطرف 1 هو الأكاديمية
+      // ضمان بنية annex
+      p.annex = p.annex ? p.annex : partnerTemplate().annex;
+      p.annex.paymentSchedule = Array.isArray(p.annex.paymentSchedule) ? p.annex.paymentSchedule : [];
+      p.annex.kpis = Array.isArray(p.annex.kpis) ? p.annex.kpis : [];
+
+      const card = document.createElement("div");
+      card.className = "party-card";
+      card.innerHTML = `
+        <div class="party-head">
+          <div class="party-badge">الطرف رقم ${n} (شريك)</div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn danger" type="button" data-remove="${idx}" ${partners.length===1 ? "disabled" : ""}>حذف الطرف</button>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div>
+            <label>اسم الطرف</label>
+            <input data-k="name" data-i="${idx}" placeholder="اسم الشركة/المؤسسة/الإدارة" value="${escapeHTML(p.name)}"/>
+          </div>
+          <div>
+            <label>الدور</label>
+            <select data-k="role" data-i="${idx}">
+              ${roleOptionsHTML(p.role)}
+            </select>
+          </div>
+
+          <div>
+            <label>الممثل القانوني</label>
+            <input data-k="rep" data-i="${idx}" placeholder="الاسم الكامل" value="${escapeHTML(p.rep)}"/>
+          </div>
+          <div>
+            <label>السجل/التعريف</label>
+            <input data-k="reg" data-i="${idx}" placeholder="RC / ICE / ID..." value="${escapeHTML(p.reg)}"/>
+          </div>
+
+          <div>
+            <label>العنوان</label>
+            <input data-k="address" data-i="${idx}" placeholder="العنوان الكامل" value="${escapeHTML(p.address)}"/>
+          </div>
+          <div>
+            <label>الهاتف/البريد</label>
+            <input data-k="contact" data-i="${idx}" placeholder="الهاتف - البريد الإلكتروني" value="${escapeHTML(p.contact)}"/>
+          </div>
+
+          <div>
+            <label>الدعم المالي السنوي (MAD) - إن وجد</label>
+            <input data-k="sponsorAnnual" data-i="${idx}" placeholder="مثال: 200000" value="${escapeHTML(p.sponsorAnnual)}" inputmode="numeric"/>
+          </div>
+          <div>
+            <label>قيمة الاستثمار (MAD) - إن وجد</label>
+            <input data-k="investmentAmount" data-i="${idx}" placeholder="مثال: 500000" value="${escapeHTML(p.investmentAmount)}" inputmode="numeric"/>
+          </div>
+
+          <div>
+            <label>ROI % - إن وجد</label>
+            <input data-k="investorROI" data-i="${idx}" placeholder="مثال: 12" value="${escapeHTML(p.investorROI)}" inputmode="decimal"/>
+          </div>
+          <div>
+            <label>نسبة المشاركة % - إن وجد</label>
+            <input data-k="investorShare" data-i="${idx}" placeholder="مثال: 20" value="${escapeHTML(p.investorShare)}" inputmode="decimal"/>
+          </div>
+        </div>
+
+        <div style="margin-top:12px; padding-top:12px; border-top:1px solid var(--line);">
+          <div class="party-badge">ملحق منظم لهذا الطرف</div>
+
+          <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:10px;">
+            <label style="margin:0; display:flex; gap:8px; align-items:center;">
+              <input type="checkbox" data-a="showAllSections" data-i="${idx}" ${p.annex?.showAllSections ? "checked" : ""} />
+              عرض كل الأقسام لهذا الطرف
+            </label>
+            <span class="muted">إذا غير مُفعل، يتم إظهار الأقسام تلقائياً حسب الدور.</span>
+          </div>
+
+          <div data-section="general" data-i="${idx}" style="margin-top:10px;">
+            <div class="grid">
+              <div>
+                <label>نطاق الملحق</label>
+                <input data-a="scope" data-i="${idx}" placeholder="مثال: رعاية موسمية + ظهور إعلاني" value="${escapeHTML(p.annex?.scope || "")}"/>
+              </div>
+              <div>
+                <label>الحصرية</label>
+                <select data-a="exclusivity" data-i="${idx}">
+                  <option value="غير حصري" ${(p.annex?.exclusivity||"غير حصري") === "غير حصري" ? "selected":""}>غير حصري</option>
+                  <option value="حصري" ${(p.annex?.exclusivity||"") === "حصري" ? "selected":""}>حصري</option>
+                </select>
+              </div>
+
+              <div>
+                <label>بداية الالتزام (اختياري)</label>
+                <input data-a="startDate" data-i="${idx}" placeholder="مثال: 01/03/2026" value="${escapeHTML(p.annex?.startDate || "")}"/>
+              </div>
+              <div>
+                <label>نهاية الالتزام (اختياري)</label>
+                <input data-a="endDate" data-i="${idx}" placeholder="مثال: 28/02/2027" value="${escapeHTML(p.annex?.endDate || "")}"/>
+              </div>
+
+              <div style="grid-column: 1 / -1;">
+                <label>ملاحظات عامة</label>
+                <textarea data-a="notes" data-i="${idx}" placeholder="أي شروط إضافية...">${escapeHTML(p.annex?.notes || "")}</textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="hr" style="margin:12px 0;"></div>
+
+          <div data-section="supply" data-i="${idx}">
+            <div class="party-badge">قسم التوريد (Kit Supplier)</div>
+            <div class="grid" style="margin-top:10px;">
+              <div>
+                <label>توريد: العناصر</label>
+                <input data-a="supplyItems" data-i="${idx}" placeholder="أطقم/كرات/سترات..." value="${escapeHTML(p.annex?.supplyItems || "")}"/>
+              </div>
+              <div>
+                <label>توريد: الكميات</label>
+                <input data-a="supplyQty" data-i="${idx}" placeholder="مثال: 60 طقم" value="${escapeHTML(p.annex?.supplyQty || "")}"/>
+              </div>
+
+              <div>
+                <label>توريد: الجودة/المواصفات</label>
+                <input data-a="supplyQuality" data-i="${idx}" placeholder="قماش/طباعة/قياسات..." value="${escapeHTML(p.annex?.supplyQuality || "")}"/>
+              </div>
+              <div>
+                <label>توريد: آجال التسليم</label>
+                <input data-a="supplyDelivery" data-i="${idx}" placeholder="مثال: 15 يوم بعد الطلب" value="${escapeHTML(p.annex?.supplyDelivery || "")}"/>
+              </div>
+
+              <div style="grid-column: 1 / -1;">
+                <label>توريد: ضمان/استبدال</label>
+                <input data-a="supplyWarranty" data-i="${idx}" placeholder="مثال: استبدال خلال 7 أيام في حالة عيب" value="${escapeHTML(p.annex?.supplyWarranty || "")}"/>
+              </div>
+            </div>
+
+            <div class="hr" style="margin:12px 0;"></div>
+          </div>
+
+          <div data-section="visibility" data-i="${idx}">
+            <div class="party-badge">قسم الإشهار/الظهور (Sponsoring)</div>
+            <div class="grid" style="margin-top:10px;">
+              <div>
+                <label>الإشهار: أماكن الظهور</label>
+                <input data-a="visibilityPlacements" data-i="${idx}" placeholder="القمصان/اللافتات/المنصات..." value="${escapeHTML(p.annex?.visibilityPlacements || "")}"/>
+              </div>
+              <div>
+                <label>الإشهار: المواد/الأصول</label>
+                <input data-a="visibilityAssets" data-i="${idx}" placeholder="لوغو/بنرات/فيديو..." value="${escapeHTML(p.annex?.visibilityAssets || "")}"/>
+              </div>
+
+              <div>
+                <label>خطة المحتوى</label>
+                <input data-a="contentPlan" data-i="${idx}" placeholder="عدد منشورات/شهر..." value="${escapeHTML(p.annex?.contentPlan || "")}"/>
+              </div>
+              <div>
+                <label>الهوية البصرية</label>
+                <input data-a="brandGuidelines" data-i="${idx}" placeholder="ألوان/مقاسات اللوغو..." value="${escapeHTML(p.annex?.brandGuidelines || "")}"/>
+              </div>
+            </div>
+
+            <div class="hr" style="margin:12px 0;"></div>
+          </div>
+
+          <div data-section="payments" data-i="${idx}">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+              <div class="party-badge">جدول الدفعات</div>
+              <button class="btn secondary" type="button" data-addpay="${idx}">+ إضافة دفعة</button>
+            </div>
+            <div id="payWrap_${idx}" style="margin-top:10px;"></div>
+
+            <div class="hr" style="margin:12px 0;"></div>
+          </div>
+
+          <div data-section="kpis" data-i="${idx}">
+            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+              <div class="party-badge">مؤشرات الأداء KPI</div>
+              <button class="btn secondary" type="button" data-addkpi="${idx}">+ إضافة KPI</button>
+            </div>
+            <div id="kpiWrap_${idx}" style="margin-top:10px;"></div>
+          </div>
+        </div>
+      `;
+
+      wrap.appendChild(card);
+      renderPayments(idx);
+      renderKPIs(idx);
+    });
+
+    // listeners: fields
+    wrap.querySelectorAll("input, select, textarea").forEach(el => {
+      el.addEventListener("input", onPartnerFieldChange);
+      el.addEventListener("change", onPartnerFieldChange);
+    });
+
+    // remove partner
+    wrap.querySelectorAll("[data-remove]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const i = Number(btn.getAttribute("data-remove"));
+        if (partners.length === 1) return;
+        partners.splice(i, 1);
+        renderPartnersForm();
+        render();
+        toast("تم الحذف", "تم حذف الطرف المحدد.");
+      });
+    });
+
+    // add payment row
+    wrap.querySelectorAll("[data-addpay]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const i = Number(btn.getAttribute("data-addpay"));
+        partners[i].annex = partners[i].annex || {};
+        partners[i].annex.paymentSchedule = Array.isArray(partners[i].annex.paymentSchedule) ? partners[i].annex.paymentSchedule : [];
+        partners[i].annex.paymentSchedule.push({ label: `دفعة ${partners[i].annex.paymentSchedule.length+1}`, amount:"", due:"" });
+        renderPartnersForm();
+        render();
+      });
+    });
+
+    // add KPI row
+    wrap.querySelectorAll("[data-addkpi]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const i = Number(btn.getAttribute("data-addkpi"));
+        partners[i].annex = partners[i].annex || {};
+        partners[i].annex.kpis = Array.isArray(partners[i].annex.kpis) ? partners[i].annex.kpis : [];
+        partners[i].annex.kpis.push({ label: `KPI ${partners[i].annex.kpis.length+1}`, target:"", period:"" });
+        renderPartnersForm();
+        render();
+      });
+    });
+
+    applyPartnerSectionVisibility();
+  }
+
+  function addPartner(){
+    partners.push(partnerTemplate());
+    renderPartnersForm();
+    render();
+    toast("تمت الإضافة ✅", "تمت إضافة طرف جديد.");
+  }
+
+  function partiesARBlock(p1, partners){
+    const parts = [];
+    parts.push(`
+      <p>
+        <strong>الطرف الأول (الأكاديمية):</strong>
+        ${escapeHTML(p1.name)}، الصفة القانونية: ${escapeHTML(p1.legal)}،
+        الممثل القانوني: ${escapeHTML(p1.rep || "—")}، رقم الوصل/السجل: ${escapeHTML(p1.reg || "—")}،
+        العنوان: ${escapeHTML(p1.address || "—")}، وسائل التواصل: ${escapeHTML(p1.contact || "—")}.
+      </p>
+    `);
+
+    partners.forEach((p, idx) => {
+      const n = idx + 2;
+      const extras = [];
+      if (p.sponsorAnnual) extras.push(`دعم سنوي: <b>${escapeHTML(p.sponsorAnnual)}</b> MAD`);
+      if (p.investmentAmount) extras.push(`استثمار: <b>${escapeHTML(p.investmentAmount)}</b> MAD`);
+      if (p.investorROI) extras.push(`ROI: <b>${escapeHTML(p.investorROI)}</b>%`);
+      if (p.investorShare) extras.push(`مشاركة: <b>${escapeHTML(p.investorShare)}</b>%`);
+
+      parts.push(`
+        <p>
+          <strong>الطرف رقم ${n} (شريك):</strong>
+          ${escapeHTML(p.name || "—")}، الصفة/الدور: ${escapeHTML(p.role || "—")}،
+          الممثل القانوني: ${escapeHTML(p.rep || "—")}، السجل/التعريف: ${escapeHTML(p.reg || "—")}،
+          العنوان: ${escapeHTML(p.address || "—")}، وسائل التواصل: ${escapeHTML(p.contact || "—")}
+          ${extras.length ? `• <span class="muted">${extras.join(" • ")}</span>` : ``}
+          .
+        </p>
+      `);
+    });
+
+    return parts.join("");
+  }
+
+  function partiesFRBlock(p1, partners){
+    const parts = [];
+    parts.push(`
+      <p>
+        <strong>Partie 1 (Académie) :</strong>
+        ${escapeHTML(p1.name)} (statut : ${escapeHTML(p1.legal)}),
+        représentant : ${escapeHTML(p1.rep || "—")}, registre/autorisation : ${escapeHTML(p1.reg || "—")},
+        adresse : ${escapeHTML(p1.address || "—")}, contact : ${escapeHTML(p1.contact || "—")}.
+      </p>
+    `);
+
+    partners.forEach((p, idx) => {
+      const n = idx + 2;
+      const extras = [];
+      if (p.sponsorAnnual) extras.push(`Appui annuel: <b>${escapeHTML(p.sponsorAnnual)}</b> MAD`);
+      if (p.investmentAmount) extras.push(`Invest.: <b>${escapeHTML(p.investmentAmount)}</b> MAD`);
+      if (p.investorROI) extras.push(`ROI: <b>${escapeHTML(p.investorROI)}</b>%`);
+      if (p.investorShare) extras.push(`Part: <b>${escapeHTML(p.investorShare)}</b>%`);
+
+      parts.push(`
+        <p>
+          <strong>Partie ${n} (Partenaire) :</strong>
+          ${escapeHTML(p.name || "—")} (rôle : ${escapeHTML(p.role || "—")}),
+          représentant : ${escapeHTML(p.rep || "—")}, identifiant : ${escapeHTML(p.reg || "—")},
+          adresse : ${escapeHTML(p.address || "—")}, contact : ${escapeHTML(p.contact || "—")}
+          ${extras.length ? `• <span class="muted">${extras.join(" • ")}</span>` : ``}
+          .
+        </p>
+      `);
+    });
+
+    return parts.join("");
+  }
+
+  function signaturesBlock(lang, partners){
+    const boxes = [];
+
+    if(lang === "ar"){
+      boxes.push(`
+        <div class="sign-box">
+          <strong>عن الطرف الأول (الأكاديمية)</strong>
+          <div style="margin-top:8px" class="muted">
+            الاسم: _______________________<br/>
+            الصفة: _______________________<br/>
+            التوقيع والختم: _______________
+          </div>
+        </div>
+      `);
+      partners.forEach((p, idx) => {
+        const n = idx + 2;
+        boxes.push(`
+          <div class="sign-box">
+            <strong>عن الطرف رقم ${n} (الشريك)</strong>
+            <div style="margin-top:8px" class="muted">
+              الاسم: _______________________<br/>
+              الصفة: _______________________<br/>
+              التوقيع والختم: _______________
+            </div>
+          </div>
+        `);
+      });
+    } else {
+      boxes.push(`
+        <div class="sign-box">
+          <strong>Pour l’Académie (Partie 1)</strong>
+          <div style="margin-top:8px" class="muted">
+            Nom: _______________________<br/>
+            Qualité: _______________________<br/>
+            Signature & Cachet: _______________
+          </div>
+        </div>
+      `);
+      partners.forEach((p, idx) => {
+        const n = idx + 2;
+        boxes.push(`
+          <div class="sign-box">
+            <strong>Pour le Partenaire (Partie ${n})</strong>
+            <div style="margin-top:8px" class="muted">
+              Nom: _______________________<br/>
+              Qualité: _______________________<br/>
+              Signature & Cachet: _______________
+            </div>
+          </div>
+        `);
+      });
+    }
+
+    return boxes.join("");
+  }
+
+  // --- Annex rendering (document) ---
+  function tableRow(k, v){
+    return `<tr>
+      <td style="padding:8px 10px; border:1px solid var(--line); width:32%; vertical-align:top;"><b>${escapeHTML(k)}</b></td>
+      <td style="padding:8px 10px; border:1px solid var(--line);">${escapeHTML(v || "—")}</td>
+    </tr>`;
+  }
+
+  function paymentsTable(lang, pay){
+    if(!Array.isArray(pay) || !pay.length) return `<p class="muted">—</p>`;
+    const isAR = (lang === "ar");
+    const rows = pay.map(r => `
+      <tr>
+        <td style="padding:8px 10px; border:1px solid var(--line);">${escapeHTML(r.label||"—")}</td>
+        <td style="padding:8px 10px; border:1px solid var(--line);">${escapeHTML(r.amount||"—")}</td>
+        <td style="padding:8px 10px; border:1px solid var(--line);">${escapeHTML(r.due||"—")}</td>
+      </tr>
+    `).join("");
+    return `
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="padding:8px 10px; border:1px solid var(--line); text-align:${isAR?"right":"left"};">${isAR?"الدفعة":"Tranche"}</th>
+            <th style="padding:8px 10px; border:1px solid var(--line); text-align:${isAR?"right":"left"};">${isAR?"المبلغ (MAD)":"Montant (MAD)"}</th>
+            <th style="padding:8px 10px; border:1px solid var(--line); text-align:${isAR?"right":"left"};">${isAR?"الاستحقاق":"Échéance"}</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
+
+  function kpisTable(lang, kpis){
+    if(!Array.isArray(kpis) || !kpis.length) return `<p class="muted">—</p>`;
+    const isAR = (lang === "ar");
+    const rows = kpis.map(r => `
+      <tr>
+        <td style="padding:8px 10px; border:1px solid var(--line);">${escapeHTML(r.label||"—")}</td>
+        <td style="padding:8px 10px; border:1px solid var(--line);">${escapeHTML(r.target||"—")}</td>
+        <td style="padding:8px 10px; border:1px solid var(--line);">${escapeHTML(r.period||"—")}</td>
+      </tr>
+    `).join("");
+    return `
+      <table style="width:100%; border-collapse:collapse; margin-top:8px;">
+        <thead>
+          <tr>
+            <th style="padding:8px 10px; border:1px solid var(--line); text-align:${isAR?"right":"left"};">${isAR?"المؤشر":"KPI"}</th>
+            <th style="padding:8px 10px; border:1px solid var(--line); text-align:${isAR?"right":"left"};">${isAR?"الهدف":"Cible"}</th>
+            <th style="padding:8px 10px; border:1px solid var(--line); text-align:${isAR?"right":"left"};">${isAR?"الفترة":"Période"}</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+  }
+
+  function annexesBlock(lang, partners){
+    const isAR = (lang === "ar");
+
+    return partners.map((p, idx) => {
+      const n = idx + 2;
+      const a = p.annex || {};
+
+      const showGeneral = shouldShowSection(p, "general");
+      const showSupply  = shouldShowSection(p, "supply");
+      const showVis     = shouldShowSection(p, "visibility");
+      const showPay     = shouldShowSection(p, "payments");
+      const showKpi     = shouldShowSection(p, "kpis");
+
+      const period = [a.startDate, a.endDate].filter(Boolean).join(" → ");
+
+      // rows conditionally
+      let rows = "";
+      if(showGeneral){
+        rows += tableRow(isAR ? "نطاق الملحق" : "Portée", a.scope);
+        rows += tableRow(isAR ? "الحصرية" : "Exclusivité", a.exclusivity);
+        rows += tableRow(isAR ? "الفترة" : "Période", period || "—");
+        rows += tableRow(isAR ? "ملاحظات" : "Notes", a.notes);
+      }
+      if(showSupply){
+        rows += tableRow(isAR ? "توريد: العناصر" : "Fourniture: éléments", a.supplyItems);
+        rows += tableRow(isAR ? "توريد: الكميات" : "Fourniture: quantités", a.supplyQty);
+        rows += tableRow(isAR ? "توريد: المواصفات" : "Fourniture: spécifications", a.supplyQuality);
+        rows += tableRow(isAR ? "توريد: التسليم" : "Fourniture: livraison", a.supplyDelivery);
+        rows += tableRow(isAR ? "توريد: الضمان" : "Fourniture: garantie", a.supplyWarranty);
+      }
+      if(showVis){
+        rows += tableRow(isAR ? "الإشهار: أماكن الظهور" : "Visibilité: emplacements", a.visibilityPlacements);
+        rows += tableRow(isAR ? "الإشهار: الأصول" : "Visibilité: assets", a.visibilityAssets);
+        rows += tableRow(isAR ? "خطة المحتوى" : "Plan contenu", a.contentPlan);
+        rows += tableRow(isAR ? "الهوية البصرية" : "Charte graphique", a.brandGuidelines);
+      }
+
+      const payTitle = isAR ? "جدول الدفعات" : "Échéancier de paiement";
+      const kpiTitle = isAR ? "مؤشرات الأداء KPI" : "KPI";
+
+      return `
+        <div style="margin:12px 0; padding:12px 14px; border:1px solid var(--line); border-radius:16px; background: rgba(255,255,255,.03);">
+          <div class="party-badge">${isAR ? `ملحق الطرف رقم ${n}` : `Annexe Partie ${n}`}</div>
+          <p class="muted" style="margin:8px 0 0;">
+            <b>${isAR ? "الطرف" : "Partie"}:</b> ${escapeHTML(p.name || "—")} •
+            <b>${isAR ? "الدور" : "Rôle"}:</b> ${escapeHTML(p.role || "—")}
+            ${a.showAllSections ? ` • <span class="muted">${isAR ? "عرض كل الأقسام: نعم" : "Afficher tout: Oui"}</span>` : ``}
+          </p>
+
+          <div class="hr" style="margin:10px 0;"></div>
+
+          ${rows ? `
+            <table style="width:100%; border-collapse:collapse;">
+              ${rows}
+            </table>
+          ` : `<p class="muted">—</p>`}
+
+          ${showPay ? `
+            <div style="margin-top:12px;">
+              <p style="margin:0;"><b>${payTitle}</b></p>
+              ${paymentsTable(lang, a.paymentSchedule)}
+            </div>
+          ` : ``}
+
+          ${showKpi ? `
+            <div style="margin-top:12px;">
+              <p style="margin:0;"><b>${kpiTitle}</b></p>
+              ${kpisTable(lang, a.kpis)}
+            </div>
+          ` : ``}
+        </div>
+      `;
+    }).join("");
+  }
+
+  function render(){
+    const date = getVal("contractDate") || currentDateAR();
+    const city = getVal("contractCity");
+
+    const p1 = {
+      name: getVal("party1Name"),
+      legal: getVal("party1Legal"),
+      rep: getVal("party1Rep"),
+      reg: getVal("party1Reg"),
+      address: getVal("party1Address"),
+      contact: getVal("party1Contact")
+    };
+
+    const duration = getVal("duration");
+    const noticeDays = getVal("noticeDays");
+    const penalty = getVal("penaltyAmount");
+    const courtCity = getVal("courtCity");
+    const extra = getVal("extraDetails");
+
+    // Print header
+    setText("pDate", date);
+    setText("pCity", city);
+
+    // AR basics
+    setText("vDate", date); setText("vDate2", date);
+    setText("vCity", city); setText("vCity2", city);
+    setText("vDuration", duration);
+    setText("vNotice", noticeDays);
+    setText("vPenalty", penalty || "—");
+    setText("vCourtCity", courtCity);
+    setText("vExtraDetails", extra || "—");
+
+
+    // FR basics
+    setText("vfDate", date); setText("vfDate2", date);
+    setText("vfCity", city); setText("vfCity2", city);
+    setText("vfDuration", duration);
+    setText("vfNotice", noticeDays);
+    setText("vfPenalty", penalty || "—");
+    setText("vfCourtCity", courtCity);
+    setText("vfExtraDetails", extra || "—");
+
+    // Parties blocks
+    $("vPartiesAR").innerHTML = partiesARBlock(p1, partners);
+    $("vPartiesFR").innerHTML = partiesFRBlock(p1, partners);
+
+    // Annexes blocks
+    $("annexesAR").innerHTML = annexesBlock("ar", partners);
+    $("annexesFR").innerHTML = annexesBlock("fr", partners);
+
+    // Signatures
+    $("signaturesAR").innerHTML = signaturesBlock("ar", partners);
+    $("signaturesFR").innerHTML = signaturesBlock("fr", partners);
+  }
+
+  function showLang(lang){
+    const ar = $("docAR");
+    const fr = $("docFR");
+    const tabAR = $("tabAR");
+    const tabFR = $("tabFR");
+
+    if(lang === "ar"){
+      ar.style.display = "";
+      fr.style.display = "none";
+      tabAR.classList.add("active");
+      tabFR.classList.remove("active");
+      document.documentElement.lang = "ar";
+      document.documentElement.dir = "rtl";
+    }else{
+      ar.style.display = "none";
+      fr.style.display = "";
+      tabFR.classList.add("active");
+      tabAR.classList.remove("active");
+      document.documentElement.lang = "fr";
+      document.documentElement.dir = "ltr";
+    }
+  }
+
+  function toggleDir(){
+    const current = document.documentElement.dir;
+    showLang(current === "rtl" ? "fr" : "ar");
+  }
+
+  function saveToStorage(){
+    const data = {
+      fields: {
+        contractDate: getVal("contractDate"),
+        contractCity: getVal("contractCity"),
+        party1Name: getVal("party1Name"),
+        party1Legal: getVal("party1Legal"),
+        party1Rep: getVal("party1Rep"),
+        party1Reg: getVal("party1Reg"),
+        party1Address: getVal("party1Address"),
+        party1Contact: getVal("party1Contact"),
+        duration: getVal("duration"),
+        noticeDays: getVal("noticeDays"),
+        penaltyAmount: getVal("penaltyAmount"),
+        courtCity: getVal("courtCity"),
+        extraDetails: getVal("extraDetails")
+      },
+      partners
+    };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    toast("تم الحفظ ✅", "تم حفظ بيانات العقد (بما فيها الأطراف والملاحق).");
+  }
+
+  function fillFromStorage(){
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw){
+      toast("لا توجد بيانات", "لم يتم العثور على بيانات محفوظة سابقاً.");
+      return;
+    }
+    const data = JSON.parse(raw);
+    const f = data.fields || {};
+    Object.keys(f).forEach(id => { if($(id)) $(id).value = f[id]; });
+
+    partners = Array.isArray(data.partners) && data.partners.length
+      ? data.partners.map(p => partnerTemplate(p))
+      : [ partnerTemplate() ];
+
+    renderPartnersForm();
+    render();
+    toast("تم التحميل ✅", "تم تحميل البيانات وتحديث العقد.");
+  }
+
+  function resetForm(){
+    if(!confirm("هل تريد مسح الحقول؟")) return;
+
+    document.querySelectorAll("input, textarea").forEach(el => el.value = "");
+    $("party1Name").value = "أكاديمية أمل كيش";
+    $("party1Legal").value = "جمعية رياضية";
+    $("duration").value = "ثلاث سنوات";
+    $("noticeDays").value = 60;
+    $("penaltyAmount").value = 200000;
+
+    partners = [ partnerTemplate() ];
+    renderPartnersForm();
+    render();
+    toast("تمت إعادة الضبط", "تمت إعادة القيم الافتراضية.");
+  }
+
+  function bindUI(){
+    $("btnToggle").addEventListener("click", toggleDir);
+    $("btnLoad").addEventListener("click", fillFromStorage);
+    $("btnSave").addEventListener("click", saveToStorage);
+    $("btnPrint").addEventListener("click", () => window.print());
+    $("btnRender").addEventListener("click", () => { render(); toast("تم التحديث", "تم تحديث نص العقد."); });
+    $("btnReset").addEventListener("click", resetForm);
+    $("btnAddParty").addEventListener("click", addPartner);
+
+    $("tabAR").addEventListener("click", () => showLang("ar"));
+    $("tabFR").addEventListener("click", () => showLang("fr"));
+
+    // live update for main fields
+    document.querySelectorAll("#contractDate,#contractCity,#party1Name,#party1Legal,#party1Rep,#party1Reg,#party1Address,#party1Contact,#duration,#noticeDays,#penaltyAmount,#courtCity,#extraDetails")
+      .forEach(el=>{
+        el.addEventListener("input", render);
+        el.addEventListener("change", render);
+      });
+  }
+
+  // init
+  bindUI();
+  renderPartnersForm();
+  render();
+</script>
+</body>
+</html>
