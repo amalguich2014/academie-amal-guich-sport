@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>عقد شراكة استراتيجية متعددة الأطراف | أكاديمية أمل كيش</title>
+
+  <style>
+    :root{
+      --bg:#0b1220; --card:#101a2f; --muted:#94a3b8; --text:#f1f5f9;
+      --line: rgba(255,255,255,.10); --accent:#2563eb; --accent2:#3b82f6;
+      --paper:#0f172a; --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --danger:#ef4444;
+    }
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #1e293b, #0b1220);
+      color: var(--text);
+      padding: 22px;
+      line-height: 1.65;
+    }
+    .container{ max-width: 1120px; margin: 0 auto; }
+
+    .topbar{
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:space-between;
+      margin-bottom:16px; padding:14px 16px;
+      border:1px solid var(--line); border-radius:18px;
+      background: rgba(16,26,47,.72); backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+    .brand{ display:flex; gap:12px; align-items:center; min-width: 260px; }
+    .logo{
+      width:52px;height:52px;border-radius:16px;background:#fff;
+      display:flex;align-items:center;justify-content:center;color:#0b1220;font-weight:900;
+      flex: 0 0 auto;
+    }
+    .brand h1{ margin:0; font-size:18px; }
+    .brand p{ margin:2px 0 0; color:var(--muted); font-size:13px; }
+    .actions{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+
+    .btn{
+      border:0; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:800;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color:#fff; transition: transform .05s ease, opacity .15s ease;
+      box-shadow: 0 8px 18px rgba(37,99,235,.22);
+    }
+    .btn.secondary{
+      background: rgba(255,255,255,.06); border:1px solid var(--line);
+      box-shadow:none; font-weight:800;
+    }
+    .btn.danger{
+      background: rgba(239,68,68,.12);
+      border: 1px solid rgba(239,68,68,.35);
+      color: #fecaca;
+      box-shadow:none;
+    }
+    .btn:disabled{ opacity:.55; cursor:not-allowed; }
+    .btn:hover{ opacity:.95; }
+    .btn:active{ transform: scale(.98); }
+
+    .tabs{ display:flex; gap:10px; margin: 14px 0; flex-wrap:wrap; }
+    .tab{
+      padding:10px 14px; border-radius:12px; cursor:pointer;
+      border:1px solid var(--line); background: rgba(255,255,255,.04);
+      color: var(--text); font-weight:800; user-select:none;
+    }
+    .tab.active{ background: linear-gradient(90deg, var(--accent), var(--accent2)); border-color: transparent; }
+
+    .card{
+      background: rgba(16,26,47,.72);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .grid{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+    @media(max-width:900px){
+      .grid{ grid-template-columns: 1fr; }
+      body{ padding:14px; }
+      .brand h1{ font-size:16px; }
+    }
+
+    label{ display:block; font-size: 13px; color: var(--muted); margin-bottom:6px; font-weight:800; }
+    input, select, textarea{
+      width:100%; padding:10px 12px; border-radius:12px;
+      border:1px solid var(--line); background: rgba(0,0,0,.18);
+      color: var(--text); outline:none;
+    }
+    textarea{ min-height: 88px; resize: vertical; }
+
+    .hint{ color: var(--muted); font-size: 13px; margin-top:6px; }
+    .section-title{ display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .section-title h3{ margin:0; }
+
+    .party-card{
+      margin-top:12px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      background: rgba(255,255,255,.03);
+    }
+    .party-head{
+      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      margin-bottom:10px;
+    }
+    .party-badge{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      background: rgba(37,99,235,.14);
+      border:1px solid rgba(37,99,235,.30);
+      color:#bfdbfe; font-weight:900; font-size: 12px;
+      white-space:nowrap;
+    }
+
+    .doc{
+      margin-top: 16px;
+      background: rgba(15,23,42,.86);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+    .doc-header{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom: 8px; }
+    h2{ margin:0 0 10px; font-size:18px; color:#e2e8f0; }
+    h3{ margin:18px 0 8px; font-size:15px; color:#e2e8f0; }
+    .muted{ color: var(--muted); font-size: 13px; }
+    .hr{ height:1px;background: var(--line); margin: 16px 0; }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center; padding:7px 10px; border-radius:999px;
+      background: rgba(37,99,235,.14); border:1px solid rgba(37,99,235,.30);
+      color:#bfdbfe; font-weight:900; font-size: 12px; margin: 6px 6px 0 0; white-space:nowrap;
+    }
+    .sign-grid{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px; margin-top: 10px; }
+    .sign-box{
+      border:1px dashed rgba(255,255,255,.22);
+      border-radius:14px; padding: 12px; min-height: 130px; background: rgba(255,255,255,.03);
+    }
+
+    .toast{
+      position: fixed; left: 16px; bottom: 16px; z-index: 1000; max-width: 360px;
+      background: rgba(15,23,42,.92); border: 1px solid var(--line);
+      padding: 12px 14px; border-radius: 14px; box-shadow: var(--shadow); display:none;
+    }
+    .toast.show{ display:block; }
+    .toast b{ display:block; margin-bottom:4px; }
+    .toast .small{ color: var(--muted); font-size: 12px; }
+
+    @page { margin: 16mm; }
+    @media print{
+      body{ background:#fff; color:#111827; padding:0; }
+      .topbar, .tabs, .card, .no-print, .toast{ display:none !important; }
+      .doc{ background:#fff; border:0; border-radius:0; color:#111827; padding: 0; box-shadow:none; }
+      .print-header{
+        display:flex !important; justify-content:space-between; align-items:flex-start; gap:12px;
+        margin-bottom: 10mm; border-bottom: 1px solid #e5e7eb; padding-bottom: 6mm;
+      }
+      .print-header .title{ font-size: 16pt; font-weight: 800; margin:0; }
+      .print-header .meta{ font-size: 10.5pt; color:#334155; }
+      .pill{ border:1px solid #cbd5e1; background:#f1f5f9; color:#0f172a; }
+      .sign-box{ background:#fff; border:1px dashed #94a3b8; }
+      a{ color:#111827; text-decoration:none; }
+      ul{ margin-top: 4mm; }
+    }
+    .print-header{ display:none; }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="topbar no-print">
+      <div class="brand">
+        <div class="logo">AK</div>
+        <div>
+          <h1>عقد شراكة استراتيجية متعددة الأطراف</h1>
+          <p>أطراف متعددة • توريد • رعاية • استثمار • دعم مؤسساتي</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn secondary" id="btnToggle">AR/FR اتجاه</button>
+        <button class="btn secondary" id="btnLoad">تحميل من التخزين</button>
+        <button class="btn secondary" id="btnSave">حفظ</button>
+        <button class="btn" id="btnPrint">طباعة / PDF</button>
+      </div>
+    </div>
+
+    <div class="tabs no-print">
+      <button class="tab active" id="tabAR">العربية</button>
+      <button class="tab" id="tabFR">Français</button>
+    </div>
+
+    <div class="doc" id="docAR">
+      <h2>عقد شراكة استراتيجية متعددة الأطراف</h2>
+      <p class="muted">نموذج تفاعلي لإدارة وإخراج عقود الشراكة متعددة الأطراف.</p>
+    </div>
+  </div>
+</body>
+</html>
+
